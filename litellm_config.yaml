@@ -1,0 +1,18 @@
+model_list:
+  - model_name: nemotron-sonnet
+    litellm_params:
+      model: nvidia_nim/nvidia/nemotron-3.5-super-vl-120b-a12b
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_NEMO_120B
+
+  - model_name: claude-opus-5-5
+    litellm_params:
+      model: nvidia_nim/nvidia/nemotron-3-ultra-550b-a55b
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_NEMO_550B
+
+general_settings:
+  master_key: os.environ/LITELLM_MASTER_KEY
+
+litellm_settings:
+  drop_params: true
